@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 import Movie from './Movie';
 import { v4 as uuidv4 } from "uuid";
+import Header from '../Header/Header';
 
 const MovieList = () => {
-    const [movieList, setMovieList] = useState([
+    const [movieList] = useState([
     {
-        img: "https://www.mvnews.org/wp-content/uploads/2022/03/uncharted-2.jpeg",
+        img: "https://m.media-amazon.com/images/M/MV5BMWEwNjhkYzYtNjgzYy00YTY2LThjYWYtYzViMGJkZTI4Y2MyXkEyXkFqcGdeQXVyNTM0OTY1OQ@@._V1_.jpg",
         title: "Uncharted",
         date: "2022",
         mpaRating: "PG-13",
@@ -15,7 +16,7 @@ const MovieList = () => {
         id: uuidv4(),
     },
     {
-        img: "https://images.thedirect.com/media/article_full/mortal-kombat-2-writer-teases-the-sequels-unexpected-story-exclusive_.jpg",
+        img: "https://m.media-amazon.com/images/M/MV5BYmRlMDkwNmQtMTA4Mi00ZDE3LThiOWItYWE3NmZjMDg3MTg2XkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_.jpg",
         title: "Mortal Kombat",
         date: "2021",
         mpaRating: "R",
@@ -31,7 +32,7 @@ const MovieList = () => {
         mpaRating: "PG-13",
         genre: "Action",
         duration: "1h 56m",
-        synopsis: "In the holy city of Alamut, Dastan adopted son of the King acquires a dagger that gives the one who holds it access to the Sands of Time. Accused of killing the King Dastan and Princess Tamina go on the run to by time to unmask the true assassin.",
+        synopsis: "In the holy city of Alamut, Dastan adopted son of the King acquires a dagger that gives the one who holds it access to the Sands of Time. Accused of killing the King Dastan and Princess Tamina go on the run to buy time to unmask the true assassin.",
         id: uuidv4(),
     },
     {
@@ -41,7 +42,7 @@ const MovieList = () => {
         mpaRating: "PG",
         genre: "Adventure",
         duration: "1h 44m",
-        synopsis: "Ace detective Harry Goodman goes mysteriously missing, prompting his 21 year old son Tim to find out what happened. In the search for his father Tim is join by Harry's former parnter Pikachu, and together they try to unravel the tangled mystery.",
+        synopsis: "Ace detective Harry Goodman goes mysteriously missing, prompting his 21 year old son Tim to find out what happened. In the search for his father Tim is join by Harry's former partner Pikachu, and together they try to unravel the tangled mystery.",
         id: uuidv4(),
     },
     {
@@ -86,9 +87,10 @@ const MovieList = () => {
     }]);
 
     return (
-        <div>
+        <>
+            <Header />
             <Movie movieList={movieList} />
-        </div>
+        </>
     )
 };
 

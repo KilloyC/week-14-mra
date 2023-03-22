@@ -1,35 +1,39 @@
 import React from 'react';
 import './Movie.css';
-import { Container, Card } from 'react-bootstrap';
-import Stars from '../Stars/Stars';
-import Review from '../Review/Review';
+import { Container, Card, Row } from 'react-bootstrap';
+import MovieReview from '../Review/Review';
+import StarRating from '../Stars/Stars';
 
 const Movie = ({movieList}) => {
     //console.log(movieList);
-//this is where I need to use state and also map through the MovieList component and add it to my Movie card.
     return(
         <Container>
             {movieList.map((movie, index) => {
+                //console.log(movie.title);
                 //console.log(movie);
-            <Card style={{ width: '28rem' }}>
-            <Card.Header as="h5">{movie.title}</Card.Header>
-            <Card.Img variant="top" src={movie.img} alt="movie poster" />
-                <Card.Body>
-                    <Card.Title>
-                    {movie.date}<br/>
-                    {movie.mpaRating}<br/>
-                    {movie.genre}<br/>
-                    {movie.duration}
-                    </Card.Title>
-                    <Card.Text>
-                    {movie.synopsis}
-                    </Card.Text>
-                </Card.Body>
-                <Card.Footer className="text-muted">
-                <Stars />
-                <Review />
-                </Card.Footer>
-            </Card>
+            return (
+                <Row key={index} className='row'>
+                <Card className='wholeCard' style={{ width: '28rem' }}>
+                    <Card.Header className='movieHeader' as="h2">{movie.title}</Card.Header>
+                        <Card.Img variant="top" src={movie.img} alt="movie poster" />
+                            <Card.Body>
+                                <Card.Title className='cardInfo'>
+                                    {movie.date} |{" "}
+                                    {movie.mpaRating} Rating |{" "}
+                                    {movie.genre} |{" "}
+                                    {movie.duration}{" "}
+                                </Card.Title>
+                                <Card.Text className='card-text'>
+                                    {movie.synopsis}
+                                </Card.Text>
+                            </Card.Body>
+                        <Card.Footer className="text-muted">
+                            <StarRating />
+                            <MovieReview />
+                        </Card.Footer>
+                </Card>
+                </Row>
+                );
             })}
         </Container>
     );

@@ -1,0 +1,31 @@
+.wholeCard {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 20px;
+    background-color: rgb(0, 0, 0, .6);
+  
+}
+
+.cardInfo {
+    text-align: center;
+    color: azure;
+}
+
+.card-text {
+    color: azure;
+}
+
+.movieHeader {
+    text-align: center;
+    font-family: 'Monofett', cursive;
+    font-size: 3.5rem;
+    color:  rgb(248, 179, 4);;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+}

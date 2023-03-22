@@ -1,9 +1,19 @@
-.fa-regular {
-    cursor: pointer;
-    color: rgb(242, 61, 61);
+.star-rating {
+    text-align: center;
 }
 
-.fa-solid {
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
     cursor: pointer;
-    color: rgb(249, 200, 5);
+    margin-bottom: .5rem;
+    font-size: 2.5rem;
+    padding: 10px;
+  }
+.on {
+    color: gold;
+}
+.off {
+    color: #fc3b22;
 }
