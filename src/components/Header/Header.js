@@ -4,8 +4,11 @@ import './Header.css';
 function Header() {
     return (
         <div className='jumbotron'>
-            <h1>Like Playing the Game?</h1>
-            <h3>Now you can watch the Movie!</h3>
+            <h1>Did you like Playing the Game?</h1>
+            <h4>Now you can review and rate the Movie!</h4>
+            <p>"this movie was awesome!"<br/>
+            ⭐⭐⭐⭐⭐
+            </p>
         </div>
     );
 }

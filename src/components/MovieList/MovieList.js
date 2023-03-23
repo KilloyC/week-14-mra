@@ -32,7 +32,7 @@ const MovieList = () => {
         mpaRating: "PG-13",
         genre: "Action",
         duration: "1h 56m",
-        synopsis: "In the holy city of Alamut, Dastan adopted son of the King acquires a dagger that gives the one who holds it access to the Sands of Time. Accused of killing the King Dastan and Princess Tamina go on the run to buy time to unmask the true assassin.",
+        synopsis: "In the holy city of Alamut, Dastan adopted son of the King acquires a dagger that gives the one who holds it access to the Sands of Time. Accused of killing the King, Dastan and Princess Tamina go on the run to buy time to unmask the true assassin.",
         id: uuidv4(),
     },
     {
@@ -42,7 +42,7 @@ const MovieList = () => {
         mpaRating: "PG",
         genre: "Adventure",
         duration: "1h 44m",
-        synopsis: "Ace detective Harry Goodman goes mysteriously missing, prompting his 21 year old son Tim to find out what happened. In the search for his father Tim is join by Harry's former partner Pikachu, and together they try to unravel the tangled mystery.",
+        synopsis: "Ace detective Harry Goodman goes mysteriously missing, prompting his 21 year old son Tim to find out what happened. In the search for his father, Tim is join by Harry's former partner Pikachu, and together they try to unravel the tangled mystery.",
         id: uuidv4(),
     },
     {
@@ -86,7 +86,7 @@ const MovieList = () => {
         id: uuidv4(),
     }]);
 
-    return (
+    return ( //this calls the header component and movie component with the prop movieList.
         <>
             <Header />
             <Movie movieList={movieList} />

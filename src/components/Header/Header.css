@@ -1,8 +1,13 @@
 .jumbotron {
-    background-color: #141414;
+    background-color: #141414ec;
     font-family: 'Press Start 2P', cursive;
     margin: 0;
-    padding: 2rem;
+    padding: 3rem;
     text-align: center;
     color: goldenrod;
+  }
+
+  .jumbotron p {
+    color: azure;
+    margin-top: 10px;
   }
