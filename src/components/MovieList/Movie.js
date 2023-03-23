@@ -7,13 +7,15 @@ import StarRating from '../Stars/Stars';
 const Movie = ({movieList}) => {
     //console.log(movieList);
 
-    const [userStarRating, setUserStarRating] = useState(0); //creating state for to hold star rating value.
-    //console.log(userStarRating);
+    const [userStarRating, setUserStarRating] = useState(0); //creating state to hold star rating value.
+    //console.log(typeof userStarRating);
 
 
     const sRating = (e) => { //function to update StarRating.
         //console.log(e.target.value);
-        setUserStarRating(e.target.value); //retrieving the value from the event target from the sRating prop.
+        const ratingStringToNumber = parseInt(e.target.value) //changing the star rating from a string to a number, because the console didn't like it the other way.
+        setUserStarRating(ratingStringToNumber); //retrieving the value from the event target from the sRating prop.
+        //console.log(ratingStringToNumber);
 
     }
 
