@@ -15,6 +15,14 @@ function MovieReview({userStarRating}) {
         setReview("");//clears out the form after submit.
     }; //console.log(reviewList);
 
+    const deleteReview = (e, index) => {
+        e.preventDefault();
+        const currentReview = [...reviewList]; //using the spread operator to assign currentReviews to the list of reviews in the array.
+        const newReviewList = currentReview.filter((c, i) => index !== i); //filtering through the array to grab the index of the selected review to be deleted.
+
+        setReviewList(newReviewList); //setting the update function to the new value of the array with newReviewList.
+    }
+
     return ( //capturing the changes for setReview and giving it the value of review. mapping through reviewList to get each review and place them into a card.
         <Container>
             <Form.Group>
@@ -32,6 +40,7 @@ function MovieReview({userStarRating}) {
                                     value={reviews.rating}
                                 />
                                 <p className="text-dark">"{reviews.review}"</p>
+                                <Button variant="outline-danger" onClick={(e) => deleteReview(e, reviewsIndex)}>Delete</Button>
                             </Card.Body>
                         </Card>
                         );
@@ -40,4 +49,4 @@ function MovieReview({userStarRating}) {
     )
 }
 
-export default MovieReview;//allows access from other components.
+export default MovieReview;

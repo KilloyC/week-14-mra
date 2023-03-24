@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Movie.css';
 import { Container, Card, Row } from 'react-bootstrap';
-import MovieReview from '../Review/Review';
+import MovieReview from '../Review/Review'; //Importing allows us to use contents from another file.
 import StarRating from '../Stars/Stars';
 
 const Movie = ({movieList}) => {
@@ -54,4 +54,4 @@ const Movie = ({movieList}) => {
     );
 };
 
-export default Movie;
+export default Movie; //makes the file contents eligible for importing.
