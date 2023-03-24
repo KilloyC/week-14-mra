@@ -84,7 +84,18 @@ const MovieList = () => {
         duration: "1h 39m",
         synopsis: "Powered with super speed, Sonic embraces his new home on Earth until he accidentally knocks out the power grid, sparking the attention of uncool evil genius Dr. Robotnik. Now it's an all out race across the globe to stop Robotnik from using Sonic's power to achieve world domination.",
         id: uuidv4(),
-    }]);
+    },
+    {
+        img: "https://m.media-amazon.com/images/M/MV5BMTY3MjU0NDA0OF5BMl5BanBnXkFtZTgwNTc0MTU3OTE@._V1_.jpg",
+        title: "The Angry Birds Movie",
+        date: "2016",
+        mpaRating: "PG",
+        genre: "Animation",
+        duration: "1h 37m",
+        synopsis: "When an island populated by happy, flightless birds is visited by mysterious green piggies, it's up to three unlikely outcasts Red, Chuck, and Bomb to figure out what the pigs are up to..",
+        id: uuidv4(),
+    }
+]);
 
     return ( //this calls the header component and movie component with the prop movieList.
         <>

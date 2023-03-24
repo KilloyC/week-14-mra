@@ -28,7 +28,7 @@ const Movie = ({movieList}) => {
                 //console.log(movie);
              (
                 <Row key={index} className='row'>
-                <Card className='wholeCard' style={{ width: '28rem' }}>
+                <Card className='wholeCard' style={{ width: '20rem' }}>
                     <Card.Header className='movieHeader' as="h2">{movie.title}</Card.Header>
                         <Card.Img variant="top" src={movie.img} alt="movie poster" />
                             <Card.Body>
